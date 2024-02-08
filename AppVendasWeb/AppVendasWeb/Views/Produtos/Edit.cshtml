@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="PrecoProduto" class="control-label"></label>
-                <input asp-for="PrecoProduto" class="form-control" />
+                <input asp-for="PrecoProduto" type="number" stop="0.01" class="form-control" />
                 <span asp-validation-for="PrecoProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
