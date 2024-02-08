@@ -24,5 +24,6 @@ namespace AppVendasWeb.Data
             modelBuilder.Entity<ItemDaVenda>().ToTable("ItemDaVenda");
 
         }
+        public DbSet<AppVendasWeb.Models.ItemDaVenda> ItemDaVenda { get; set; } = default!;
     }
 }
