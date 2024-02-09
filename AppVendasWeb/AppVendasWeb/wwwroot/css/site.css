@@ -21,11 +21,6 @@ body {
     margin-bottom: 60px;
 }
 
-tituloPagina{
-    text-align:center;
-    margin-top:10px;
-
-}
 
     body li a {
         transition: background-color 0.3s;
@@ -37,5 +32,7 @@ tituloPagina{
 
         body li a:hover {
             transition: color 0.3s;
-            color: #ffd800;
+            color:#ffd800;
         }
+
+        
