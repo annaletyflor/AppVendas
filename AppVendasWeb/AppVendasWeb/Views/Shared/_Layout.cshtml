@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AppVendasWeb</title>
+
+    <title@ViewData["Title"] - AppVendasWeb</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AppVendasWeb.styles.css" asp-append-version="true" />
 </head>
 <body style="background:radial-gradient( circle farthest-corner at 10% 20%, rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );">
     <header>
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark text-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppVendasWeb</a>
@@ -20,21 +22,27 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
+                            <svg class="mx-2" bootstrap-icon="HeartArrow" width="16" height="16" aria-label="Editar"></svg>
                             <a class=" " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <svg class="mx-5" bootstrap-icon="HeartArrow" width="16" height="16" aria-label="Editar"></svg>
                             <a class="" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
                         </li>
                         <li class="nav-item">
+                            <svg class="mx-5" bootstrap-icon="HeartArrow" width="16" height="16" aria-label="Editar"></svg>
                             <a class="" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
                         </li>
                         <li class="nav-item">
+                            <svg class="mx-5" bootstrap-icon="HeartArrow" width="16" height="16" aria-label="Editar"></svg>
                             <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
                         </li>
                         <li class="nav-item">
+                            <svg class="mx-5" bootstrap-icon="HeartArrow" width="16" height="16" aria-label="Editar"></svg>
                             <a class="" asp-area="" asp-controller="Vendas" asp-action="Index">Vendas</a>
                         </li>
                         <li class="nav-item">
+                            <svg class="mx-5" bootstrap-icon="HeartArrow" width="16" height="16" aria-label="Editar"></svg>
                             <a class="" asp-area="" asp-controller="ItensDaVenda" asp-action="Index">Itens da Venda</a>
                         </li>
                     </ul>
@@ -48,10 +56,16 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-light bg-dark text-center">
+    <footer class="border-top footer text-light bg-dark text-center position-absolute">
         <div class="container">
             &copy; 2024 - AppVendasWeb -
             <a class="text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
+        </div>
+        Criado por
+        <a class="text-warning" href="https://github.com/annaletyflor">AnnaLetyFlor</a>
+        <svg class="mx-1 link-warning" bootstrap-icon="HeartFill" width="16" height="16" aria-label="Editar"></svg>
+        <div>
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
