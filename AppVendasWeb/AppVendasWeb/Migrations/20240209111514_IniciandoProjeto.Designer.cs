@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppVendasWeb.Migrations
 {
     [DbContext(typeof(AppVendasContext))]
-    [Migration("20240208174012_Nova")]
-    partial class Nova
+    [Migration("20240209111514_IniciandoProjeto")]
+    partial class IniciandoProjeto
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,6 +78,33 @@ namespace AppVendasWeb.Migrations
                     b.ToTable("Cliente", (string)null);
                 });
 
+            modelBuilder.Entity("AppVendasWeb.Models.ItemDaVenda", b =>
+                {
+                    b.Property<Guid>("ItemDaVendaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProdutoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("VendaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ItemDaVendaId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.HasIndex("VendaId");
+
+                    b.ToTable("ItemDaVenda", (string)null);
+                });
+
             modelBuilder.Entity("AppVendasWeb.Models.Produto", b =>
                 {
                     b.Property<Guid>("ProdutoId")
@@ -87,19 +114,63 @@ namespace AppVendasWeb.Migrations
                     b.Property<Guid>("CategoriaId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("PrecoProduto")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("ProdutoDescricao")
+                    b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("ProdutoId");
 
                     b.HasIndex("CategoriaId");
 
                     b.ToTable("Produto", (string)null);
+                });
+
+            modelBuilder.Entity("AppVendasWeb.Models.Venda", b =>
+                {
+                    b.Property<Guid>("VendaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DataVenda")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("NotaFiscal")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ValorTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("VendaId");
+
+                    b.HasIndex("ClienteId");
+
+                    b.ToTable("Venda", (string)null);
+                });
+
+            modelBuilder.Entity("AppVendasWeb.Models.ItemDaVenda", b =>
+                {
+                    b.HasOne("AppVendasWeb.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AppVendasWeb.Models.Venda", "Venda")
+                        .WithMany()
+                        .HasForeignKey("VendaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
+
+                    b.Navigation("Venda");
                 });
 
             modelBuilder.Entity("AppVendasWeb.Models.Produto", b =>
@@ -111,6 +182,17 @@ namespace AppVendasWeb.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("AppVendasWeb.Models.Venda", b =>
+                {
+                    b.HasOne("AppVendasWeb.Models.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
                 });
 #pragma warning restore 612, 618
         }

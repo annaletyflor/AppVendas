@@ -7,7 +7,7 @@
         public Produto? Produto { get; set; }
         public Guid VendaId { get; set; }
         public Venda? Venda { get; set; }
-        public int Quantidades { get; set; }
-        public decimal Valor { get; set;}
+        public int Quantidade { get; set; }
+        public decimal Valor { get; set; }
     }
 }

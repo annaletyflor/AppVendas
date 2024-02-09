@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.8.34511.84
+VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVendasWeb", "AppVendasWeb\AppVendasWeb.csproj", "{F7776FF6-2C7A-4F67-AD6C-715A9C40B556}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVendasWeb", "AppVendasWeb\AppVendasWeb.csproj", "{0996EE29-E342-422A-86D5-9CC3D29A66FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F7776FF6-2C7A-4F67-AD6C-715A9C40B556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7776FF6-2C7A-4F67-AD6C-715A9C40B556}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7776FF6-2C7A-4F67-AD6C-715A9C40B556}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7776FF6-2C7A-4F67-AD6C-715A9C40B556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0996EE29-E342-422A-86D5-9CC3D29A66FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0996EE29-E342-422A-86D5-9CC3D29A66FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0996EE29-E342-422A-86D5-9CC3D29A66FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0996EE29-E342-422A-86D5-9CC3D29A66FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E1F81E23-9A93-4321-9BD6-405F9EE29841}
+		SolutionGuid = {E5F53187-D8CA-4C3F-8752-2F0977CC5ECA}
 	EndGlobalSection
 EndGlobal
